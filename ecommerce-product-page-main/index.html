@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="./app.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-logo">sneakers</div>
+
+        <ul class="nav-list">
+          <li class="nav-list-link"><a href="#">Collections</a></li>
+
+          <li class="nav-list-link"><a href="#">Men</a></li>
+
+          <li class="nav-list-link"><a href="#">Women</a></li>
+
+          <li class="nav-list-link"><a href="#">About</a></li>
+
+          <li class="nav-list-link"><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-cart-profile">
+          <img src="images/icon-cart.svg" class="cart-icon" />
+          <img src="images/image-avatar.png" class="profile-pic" alt="" />
+        </div>
+
+        <div class="cart-card">
+          <h4 class="cart-name">Cart</h4>
+          <hr />
+          <div class="cart-empty">Your cart is empty</div>
+          <div class="cart-container">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              id="cart-img"
+              alt=""
+            />
+
+            <div class="cart-item-calc">
+              <p class="cart-item-name">Fall Limited Edition Sneakers</p>
+              <p class="cart-item-price">
+                $125.00 &cross;<span class="cart-item-quantity">0</span>
+                <span class="cart-item-price-money">
+                  $<span class="cart-item-total">0.00</span>
+                </span>
+              </p>
+            </div>
+
+            <img src="images/icon-delete.svg" class="delect-icon" alt="" />
+          </div>
+          <button type="button" class="checkout">Checkout</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="product-section">
+      <section class="product-pics">
+        <div class="product-main-pic">
+          <img src="images/image-product-1.jpg" alt="" id="main-pic" />
+        </div>
+
+        <div class="product-thumnail-pic">
+          <div class="thumnail-pic">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              onclick="changePic('images/image-product-1.jpg')"
+            />
+          </div>
+          <div class="thumnail-pic">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+              onclick="changePic('images/image-product-2.jpg')"
+            />
+          </div>
+          <div class="thumnail-pic">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+              onclick="changePic('images/image-product-3.jpg')"
+            />
+          </div>
+          <div class="thumnail-pic">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+              onclick="changePic('images/image-product-4.jpg')"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="product-info">
+        <h2 class="product-company">SNEAKER COMPANY</h2>
+
+        <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+
+        <p class="product-text">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="product-pricing">
+          <h3 class="product-currect-price">
+            $125.00 <span class="product-discout-precentage">50%</span>
+          </h3>
+          <p class="product-previous-price">$250.00</p>
+        </div>
+
+        <div class="produc-cart-calculation-container">
+          <div class="product-calculation">
+            <button type="button" class="sub btn">
+              <img src="images/icon-minus.svg" alt="" />
+            </button>
+            <div class="product-quantity">0</div>
+            <button type="button" class="add btn">
+              <img src="images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+
+          <button type="button" class="product-cart-btn">
+            <img src="images/icon-cart.svg" alt="" />Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
