@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <script src="./app.js" defer></script>
+    <script src="./design/app.js" defer></script>
 
     <link
       rel="icon"
@@ -14,13 +14,17 @@
     />
     <link rel="stylesheet" href="./style.css" />
 
-    <title>Frontend Mentor | E-commerce product page</title>
+    <title>E-commerce product page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <header class="header">
       <nav class="nav">
+        <div class="nav-menu-btn">
+          <img src="images/icon-menu.svg" alt="" id="nav-menu-icon" />
+        </div>
+
         <div class="nav-logo">sneakers</div>
 
         <ul class="nav-list">
@@ -71,7 +75,13 @@
     <main class="product-section">
       <section class="product-pics">
         <div class="product-main-pic">
+          <div class="product-pic-left-btn">
+            <img src="images/icon-previous.svg" id="previous" alt="" />
+          </div>
           <img src="images/image-product-1.jpg" alt="" id="main-pic" />
+          <div class="product-pic-right-btn">
+            <img src="images/icon-next.svg" id="next" alt="" />
+          </div>
         </div>
 
         <div class="product-thumnail-pic">

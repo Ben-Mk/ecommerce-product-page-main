@@ -7,11 +7,40 @@ const cartContainer = document.querySelector(".cart-container");
 const cartEmpty = document.querySelector(".cart-empty");
 const checkOutBtn = document.querySelector(".checkout");
 const addCartBtn = document.querySelector(".product-cart-btn");
+const navMenuBtn = document.querySelector(".nav-menu-btn");
+const navMenuIcon = document.querySelector("#nav-menu-icon");
 const deleteBtn = document.querySelector(".delect-icon");
+const navMenu = document.querySelector(".nav-list");
+const previousBtn = document.querySelector("#previous");
+const nextBtn = document.querySelector("#next");
 let mainPic = document.querySelector("#main-pic");
 let cartQuantity = document.querySelector(".cart-item-quantity");
 let cartTotal = document.querySelector(".cart-item-total");
 
+let picNum = 1;
+previousBtn.addEventListener("click", () => {
+  if (picNum > 1) {
+    picNum--;
+    mainPic.src = `images/image-product-${picNum}.jpg`;
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (picNum < 4) {
+    picNum++;
+    mainPic.src = `images/image-product-${picNum}.jpg`;
+  }
+});
+console.log(navMenuIcon);
+navMenuBtn.addEventListener("click", () => {
+  if (navMenu.classList.contains("active")) {
+    navMenu.classList.remove("active");
+    navMenuIcon.src = "images/icon-menu.svg";
+  } else {
+    navMenu.classList.add("active");
+    navMenuIcon.src = "images/icon-close.svg";
+  }
+});
 cartIcon.addEventListener("click", () => {
   cartCard.classList.toggle("display");
 });
@@ -72,5 +101,6 @@ deleteBtn.addEventListener("click", () => {
   cartContainer.classList.remove("appear");
   cartEmpty.style.display = "block";
   checkOutBtn.style.display = "none";
+  counter = 0;
+  quantity.innerText = counter;
 });
-console.log(cartContainer);
